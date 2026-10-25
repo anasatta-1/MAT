@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS mat_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE mat_db;
+
 
 CREATE TABLE companies (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -99,5 +98,10 @@ INSERT INTO users (company_id, user_code, full_name, email, password_hash, role)
 VALUES (1, 'jdoe', 'Jane Doe', 'jane.doe@acme.test', '$2y$10$1tTYPR1MN1oV5iTfQaTxWu7P0qKsSXM2t.gG2IKXCLMBHkX6flo/q', 'admin');
 INSERT INTO users (company_id, user_code, full_name, email, password_hash, role)
 VALUES (1, 'mmanager', 'Michael Manager', 'michael.manager@acme.test', '$2y$10$6HKt/XmumGNdEYQhGwX3xuo9ZVNIBnGTo075IfE8UhYRRLYrGS2da', 'manager');
+INSERT INTO users (company_id, user_code, full_name, email, password_hash, role) VALUES
+(1, 'adnan', 'Adnan', NULL, '$2y$10$mZMbPz1W5ijfN0tvMUg58.Zgd6me8qE5uXZjCn1OgIo2b6M28o7UK', 'manager'),
+(1, 'anas', 'Anas', NULL, '$2y$10$PcpxnF/TgFd4mduh0s1Tt.4ABd2Y.rwTOouKufq1ReBqlYW.4agI.', 'member'),
+(1, 'extra1', 'Extra 1', NULL, '$2y$10$yeNk9oXePxGGKDRGt2.a9.IJc55uWw33liJj/es5qjJNXz31uhqJS', 'member'),
+(1, 'extra2', 'Extra 2', NULL, '$2y$10$pw/KR8AOukX.GPqqh4lvOeIozjAzGDLrp3I9AwuLTz7OL38sFQPBq', 'member');
 INSERT INTO projects (company_id, name, description, goals, bottlenecks, status, created_by)
 VALUES (1, 'Q3 Product Launch', 'End-to-end launch of the new analytics dashboard.', 'Ship the dashboard to 100 beta customers by end of Q3.', 'Design hand-off is delayed; analytics API rate limits must be negotiated.', 'Active', 1);

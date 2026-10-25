@@ -1,4 +1,4 @@
-<?php
+<?php header('Location: pin.php'); exit;
 require_once __DIR__.'/includes/auth.php';
 if (!empty($_SESSION['user'])) { header('Location: index.php'); exit; }
 $error = null;
